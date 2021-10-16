@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[591],{869:function(t){t.exports=JSON.parse('{"allTagsPath":"https://payfi-tech.github.io/payfidoc/blog/tags","slug":"https://payfi-tech.github.io/payfidoc/blog/tags/facebook","name":"facebook","count":1,"permalink":"https://payfi-tech.github.io/payfidoc/blog/tags/facebook"}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[739],{3493:function(e){e.exports=JSON.parse('{"allTagsPath":"/payfidoc/blog/tags","slug":"/payfidoc/blog/tags/hello","name":"hello","count":2,"permalink":"/payfidoc/blog/tags/hello"}')}}]);
