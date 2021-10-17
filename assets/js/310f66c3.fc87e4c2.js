@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[733],{9121:function(s){s.exports=JSON.parse('{"allTagsPath":"/payfidoc/blog/tags","slug":"/payfidoc/blog/tags/docusaurus","name":"docusaurus","count":4,"permalink":"/payfidoc/blog/tags/docusaurus"}')}}]);
