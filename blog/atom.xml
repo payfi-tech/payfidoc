@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://documentation.payfi.ng/blog</id>
-    <title>Payfi Documentation Blog</title>
+    <title>Payfi Blog</title>
     <updated>2021-08-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://documentation.payfi.ng/blog"/>
-    <subtitle>Payfi Documentation Blog</subtitle>
+    <subtitle>Payfi Blog</subtitle>
     <icon>https://documentation.payfi.ng/https://res.cloudinary.com/dflmq4zxb/image/upload/v1628068180/payfiNewLogo_awu6t8.png</icon>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
