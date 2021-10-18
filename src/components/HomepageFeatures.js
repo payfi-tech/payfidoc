@@ -4,32 +4,29 @@ import styles from './HomepageFeatures.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Payfi Instore',
     Svg: require('../../static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        lets you provide Payfi as a payment method in your physical store.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Payfi Checkout',
     Svg: require('../../static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        lets you accept payments on your website with Payfi. No need for any client-side integration
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Payfi Payment Link',
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Send your consumer a link by e-mail or sms to pay.
       </>
     ),
   },
