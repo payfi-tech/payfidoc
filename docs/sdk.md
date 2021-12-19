@@ -1,5 +1,5 @@
 ---
-sidebar_label: "SDK Set up"
+sidebar_label: 'SDK Set up'
 sidebar_position: 1
 ---
 
@@ -12,8 +12,9 @@ Learn how to use **Pay-Fi SDK Quick**.
 BASE URL
 
 ```shell
-https://api-payfi-staging.herokuapp.com
+https://api.payfi.ng/
 ```
+
 SDK URL
 
 ```shell
@@ -21,17 +22,16 @@ https://payfi-sdk-js.s3.amazonaws.com/payfi.js
 ```
 
 ## Parameters Table
+
 The Table Below is states the parameters and how to use them
 
-
-| Param     | Required   | Description           |
-|-----------|------------| :---------------------:|
-| apiKey      | YES           | Public Key attached to your account |  
-| amount      | YES           | Amount in Kobo |  
-| reference      | YES           | A unique transaction reference |  
-| callback      | NO           | Function that runs when payment is successful |  
-| onClose      | NO           | Function called if the customer closes the payment window |  
-
+| Param     | Required |                        Description                        |
+| --------- | -------- | :-------------------------------------------------------: |
+| apiKey    | YES      |            Public Key attached to your account            |
+| amount    | YES      |                      Amount in Kobo                       |
+| reference | YES      |              A unique transaction reference               |
+| callback  | NO       |       Function that runs when payment is successful       |
+| onClose   | NO       | Function called if the customer closes the payment window |
 
 ## Step 1
 
@@ -48,7 +48,7 @@ First initialize the sdk as shown below
         onClose: () => {
           document.getElementById("btn").removeAttribute("disabled")
           console.log('modal close')
-        } 
+        }
       });
 ```
 
@@ -61,11 +61,21 @@ Initiate payment process passing the amount and reference.
 ```
 
 **RE-QUERY**
+
 ```shell
-/merchant/purchase/verify-by-reference
+https://api.payfi.ng/v1/merchant/purchase/verify-by-reference
+```
+
+**HEADER**
+
+```shell
+  {
+    "payfi-sec-key":"secret key"
+  }
 ```
 
 **BODY**
+
 ```shell
   {
     "reference":"testing-now-igho"
@@ -73,6 +83,7 @@ Initiate payment process passing the amount and reference.
 ```
 
 ## Example Implementation
+
 ```shell
 <script src="https://payfi-sdk-js.s3.amazonaws.com/payfi.js"></script>
   <script type="text/javascript">
@@ -94,6 +105,32 @@ Initiate payment process passing the amount and reference.
          onClose: () => {
            console.log('modal close')
           }
-        }); 
+        });
   </script>
 ```
+
+## SETTING UP WEBHOOK
+
+After every successful transaction, payfi will notify you via a webhook call, to set up your webhook you need to add this on the merchant portal https://merchant.payfi.ng
+
+Payfi will call your webhook with this request:
+
+```shell
+ {
+   "event": "payfi.events.payment",
+   "status": "approved",
+   "message": "string",
+   "txRef": "42_1639832966"
+ }
+```
+
+**HEADER**
+
+```shell
+  {
+    "payfi-secret-key":"your secret key",
+  }
+```
+
+
+Please check the header for this secret key before offering value
